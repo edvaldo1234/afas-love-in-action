@@ -1,0 +1,119 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.99 0.005 320);
+  --foreground: oklch(0.22 0.05 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.05 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.05 260);
+  --primary: oklch(0.72 0.17 350);
+  --primary-foreground: oklch(0.99 0.005 320);
+  --secondary: oklch(0.55 0.16 250);
+  --secondary-foreground: oklch(0.99 0.005 320);
+  --muted: oklch(0.96 0.015 320);
+  --muted-foreground: oklch(0.5 0.04 260);
+  --accent: oklch(0.95 0.03 250);
+  --accent-foreground: oklch(0.22 0.05 260);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.005 320);
+  --border: oklch(0.22 0.05 260 / 0.1);
+  --input: oklch(0.22 0.05 260 / 0.15);
+  --ring: oklch(0.72 0.17 350);
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-reveal {
+  animation: reveal 0.8s var(--ease-out-expo) both;
+}
+
+/* Scroll-triggered reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s var(--ease-out-expo),
+    transform 0.7s var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating / ambient blobs */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -30px) scale(1.08); }
+}
+@keyframes float-slower {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-25px, 25px) scale(1.12); }
+}
+.animate-float-slow { animation: float-slow 12s ease-in-out infinite; }
+.animate-float-slower { animation: float-slower 16s ease-in-out infinite; }
+
+/* Animated progress fill */
+@keyframes grow-x {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-reveal,
+  .animate-float-slow,
+  .animate-float-slower { animation: none; }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  ::selection {
+    background-color: color-mix(in oklab, var(--primary) 20%, transparent);
+  }
+}
