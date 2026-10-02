@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Instituto AFAS — Ame Fazendo Ação Solidária no interior de Goiás" },
-      { name: "description", content: "Há mais de 8 anos no interior de Goiás, mudando a realidade de crianças com a força voluntária da Keilla e sua equipe de nutricionistas, psicólogos e advogados." },
+      { name: "description", content: "Instituto AFAS: cuidado integral para crianças, adolescentes e famílias, com programas de saúde física, mental, socioemocional e espiritual." },
     ],
   }),
   component: HomePage,
@@ -34,14 +34,17 @@ function HomePage() {
         <div className="relative max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 sm:gap-12 items-center">
           <div className="lg:col-span-7 animate-reveal">
             <div className="inline-block px-3 py-1 border border-primary/30 text-primary text-[10px] font-mono uppercase tracking-widest rounded mb-5 sm:mb-6">
-              Ame Fazendo Ação Solidária
+              Porque quem ama, faz. AFAS.
             </div>
             <h1 className="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tighter leading-[0.95] sm:leading-[0.9] mb-6 sm:mb-8 text-balance">
               Transformando o futuro no <span className="text-primary">coração de Goiás.</span>
             </h1>
-            <p className="text-base sm:text-xl text-muted-foreground max-w-[50ch] leading-relaxed mb-8 sm:mb-10 text-pretty">
-              Há mais de 8 anos, o Instituto AFAS atua no interior goiano unindo profissionais
-              voluntários para oferecer dignidade, saúde e esperança para centenas de crianças.
+            <p className="text-base sm:text-xl text-muted-foreground max-w-[54ch] leading-relaxed mb-4 text-pretty">
+              O Instituto AFAS promove cuidado integral a crianças, adolescentes e suas famílias,
+              com programas voltados à saúde física, mental, socioemocional e espiritual.
+            </p>
+            <p className="text-sm sm:text-base font-semibold text-primary mb-8 sm:mb-10">
+              Transformando vidas com Amor e Ação.
             </p>
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
               <Link
