@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroChildren from "@/assets/hero-children.jpg";
+import heroChildrenAsset from "@/assets/hero-children.jpg.asset.json";
 import keillaAsset from "@/assets/keilla-foto.jpg.asset.json";
 import { campaigns } from "@/data/campaigns";
 import { useDonation } from "@/components/site/DonationProvider";
@@ -62,7 +62,7 @@ function HomePage() {
           </div>
           <div className="lg:col-span-5 animate-reveal [animation-delay:200ms]">
             <img
-              src={heroChildren}
+              src={heroChildrenAsset.url}
               alt="Crianças atendidas pelo Instituto AFAS no interior de Goiás"
               width={1024}
               height={1280}
