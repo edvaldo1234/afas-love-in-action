@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { DonationProvider } from "@/components/site/DonationProvider";
+import faviconAsset from "@/assets/favicon.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -87,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e923c6b4-bd9c-4bf2-bb92-147f14e105b5/id-preview-90c1c585--bd808b11-127d-4386-96de-f56cbdaaefd2.lovable.app-1781654042557.png" },
     ],
     links: [
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "icon", type: "image/png", href: faviconAsset.url },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
