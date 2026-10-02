@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import volunteers from "@/assets/volunteers.jpg";
+import volunteersAsset from "@/assets/volunteers.jpg.asset.json";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/equipe")({
@@ -58,7 +58,7 @@ function EquipePage() {
       <section className="px-5 sm:px-6 pb-12 sm:pb-16">
         <Reveal className="max-w-7xl mx-auto">
           <img
-            src={volunteers}
+            src={volunteersAsset.url}
             alt="Equipe voluntária do Instituto AFAS"
             width={1200}
             height={800}
