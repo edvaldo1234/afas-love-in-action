@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useDonation } from "@/components/site/DonationProvider";
+import { useVolunteer } from "@/components/site/VolunteerProvider";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/contato")({
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/contato")({
 
 function ContatoPage() {
   const { openDonation } = useDonation();
+  const { openVolunteer } = useVolunteer();
   return (
     <>
       <section className="pt-12 sm:pt-20 pb-12 sm:pb-16 px-5 sm:px-6">
@@ -68,14 +70,13 @@ function ContatoPage() {
               Profissionais de saúde, educação, direito ou qualquer área são bem-vindos. Mande
               uma mensagem contando como pode ajudar.
             </p>
-            <a
-              href="https://wa.me/556293944050?text=Ol%C3%A1,%20gostaria%20de%20ser%20volunt%C3%A1rio(a)%20do%20Instituto%20AFAS%20e%20quero%20saber%20como%20posso%20contribuir"
-              target="_blank"
-              rel="noreferrer"
+            <button
+              type="button"
+              onClick={openVolunteer}
               className="w-full sm:w-auto text-center inline-block bg-foreground text-background px-6 py-3 font-bold rounded-lg"
             >
-              Falar pelo WhatsApp
-            </a>
+              Preencher ficha de voluntário
+            </button>
           </Reveal>
         </div>
 
