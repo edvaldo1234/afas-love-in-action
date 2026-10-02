@@ -3,6 +3,7 @@ import heroChildrenAsset from "@/assets/hero-children.jpg.asset.json";
 import keillaAsset from "@/assets/keilla-foto.jpg.asset.json";
 import { campaigns } from "@/data/campaigns";
 import { useDonation } from "@/components/site/DonationProvider";
+import { useVolunteer } from "@/components/site/VolunteerProvider";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
@@ -18,6 +19,7 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   const featured = campaigns.slice(0, 3);
   const { openDonation } = useDonation();
+  const { openVolunteer } = useVolunteer();
   return (
     <>
       {/* Hero */}
@@ -53,14 +55,13 @@ function HomePage() {
               >
                 Conheça nossos programas
               </Link>
-              <a
-                href="https://wa.me/556293944050?text=Ol%C3%A1,%20gostaria%20de%20ser%20volunt%C3%A1rio(a)%20do%20Instituto%20AFAS%20e%20quero%20saber%20como%20posso%20contribuir"
-                target="_blank"
-                rel="noreferrer"
+              <button
+                type="button"
+                onClick={openVolunteer}
                 className="text-center px-6 sm:px-8 py-4 border border-border font-bold rounded-lg hover:bg-card hover:-translate-y-0.5 transition-all"
               >
                 Seja um voluntário
-              </a>
+              </button>
             </div>
           </div>
           <div className="lg:col-span-5 animate-reveal [animation-delay:200ms]">
@@ -271,14 +272,13 @@ function HomePage() {
             >
               Quero ser um Doador
             </button>
-            <a
-              href="https://wa.me/556293944050?text=Ol%C3%A1,%20gostaria%20de%20ser%20volunt%C3%A1rio(a)%20do%20Instituto%20AFAS%20e%20quero%20saber%20como%20posso%20contribuir"
-              target="_blank"
-              rel="noreferrer"
+            <button
+              type="button"
+              onClick={openVolunteer}
               className="w-full md:w-auto text-center border border-foreground px-10 sm:px-12 py-5 sm:py-6 text-lg font-bold rounded-full hover:bg-foreground hover:text-background transition-colors"
             >
               Quero ser Voluntário
-            </a>
+            </button>
           </div>
         </Reveal>
       </section>
