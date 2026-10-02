@@ -1,6 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import volunteersAsset from "@/assets/volunteers.jpg.asset.json";
 import { Reveal } from "@/components/site/Reveal";
+import { useVolunteer } from "@/components/site/VolunteerProvider";
 
 export const Route = createFileRoute("/equipe")({
   head: () => ({
@@ -38,6 +39,7 @@ const specialties = [
 ];
 
 function EquipePage() {
+  const { openVolunteer } = useVolunteer();
   return (
     <>
       <section className="pt-12 sm:pt-20 pb-12 sm:pb-16 px-5 sm:px-6">
@@ -89,12 +91,13 @@ function EquipePage() {
             Aceitamos voluntários de todas as áreas — da logística ao direito, da psicologia ao
             ensino. Se você tem tempo e vontade de transformar, tem espaço no AFAS.
           </p>
-          <Link
-            to="/contato"
+          <button
+            type="button"
+            onClick={openVolunteer}
             className="inline-block bg-primary text-primary-foreground px-10 py-5 font-bold rounded-full hover:scale-105 transition-transform"
           >
             Quero ser voluntário
-          </Link>
+          </button>
         </Reveal>
       </section>
     </>
