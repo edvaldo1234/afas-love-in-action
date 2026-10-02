@@ -141,7 +141,7 @@ export function VolunteerProvider({ children }: { children: ReactNode }) {
       {children}
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="w-[calc(100%-1.5rem)] max-w-2xl max-h-[90dvh] overflow-y-auto rounded-2xl p-5 sm:p-7">
+        <DialogContent className="w-[calc(100%_-_1.5rem)] max-w-2xl max-h-[90dvh] overflow-y-auto rounded-2xl p-5 sm:p-7">
           {status === "success" ? (
             <div className="py-6 sm:py-10 text-center">
               <div className="mx-auto mb-5 grid size-14 place-items-center rounded-full bg-primary/10 text-2xl text-primary">
@@ -267,7 +267,7 @@ export function VolunteerProvider({ children }: { children: ReactNode }) {
                       required
                       type="number"
                       inputMode="numeric"
-                      min={14}
+                      min={1}
                       max={100}
                       value={form.age}
                       onChange={(e) => updateField("age", e.target.value)}
