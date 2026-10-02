@@ -78,14 +78,14 @@ export function DonationProvider({ children }: { children: ReactNode }) {
       {children}
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="w-[calc(100%-1.5rem)] max-w-md max-h-[90dvh] overflow-y-auto rounded-2xl p-5 sm:p-6">
+        <DialogContent className="sm:max-w-md">
           {step === "form" ? (
             <>
-              <DialogHeader className="text-left">
-                <DialogTitle className="text-2xl sm:text-3xl font-extrabold tracking-tighter">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-extrabold tracking-tighter">
                   Fazer uma doação
                 </DialogTitle>
-                <DialogDescription className="text-sm sm:text-base">
+                <DialogDescription>
                   Preencha seus dados para gerar o QR Code PIX do Instituto AFAS.
                 </DialogDescription>
               </DialogHeader>
@@ -98,12 +98,11 @@ export function DonationProvider({ children }: { children: ReactNode }) {
                   <input
                     id="donor-name"
                     type="text"
-                    autoComplete="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Seu nome"
                     maxLength={120}
-                    className="w-full min-h-12 rounded-xl border border-input bg-background px-4 py-3 text-base outline-none focus:ring-2 focus:ring-ring"
+                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring"
                   />
                 </div>
 
@@ -118,16 +117,16 @@ export function DonationProvider({ children }: { children: ReactNode }) {
                     value={amount}
                     onChange={(e) => setAmount(e.target.value.replace(/[^0-9.,]/g, ""))}
                     placeholder="Ex: 50,00"
-                    className="w-full min-h-12 rounded-xl border border-input bg-background px-4 py-3 text-base outline-none focus:ring-2 focus:ring-ring"
+                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring"
                   />
                 </div>
 
-                {error && <p className="text-sm text-destructive" role="alert">{error}</p>}
+                {error && <p className="text-sm text-destructive">{error}</p>}
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full min-h-12 rounded-full bg-primary px-6 py-3 font-bold text-primary-foreground transition-all hover:bg-primary/90 active:scale-[0.98] disabled:opacity-60"
+                  className="w-full rounded-full bg-primary px-6 py-3 font-bold text-primary-foreground transition-all hover:bg-primary/90 disabled:opacity-60"
                 >
                   {loading ? "Gerando..." : "Gerar doação"}
                 </button>
@@ -135,8 +134,8 @@ export function DonationProvider({ children }: { children: ReactNode }) {
             </>
           ) : (
             <>
-              <DialogHeader className="text-left">
-                <DialogTitle className="text-2xl sm:text-3xl font-extrabold tracking-tighter">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-extrabold tracking-tighter">
                   Escaneie o QR Code PIX
                 </DialogTitle>
                 <DialogDescription>
@@ -148,18 +147,18 @@ export function DonationProvider({ children }: { children: ReactNode }) {
                 <img
                   src={pixQr.url}
                   alt="QR Code PIX do Instituto AFAS"
-                  className="w-[min(16rem,78vw)] max-w-full rounded-xl border border-border"
+                  className="w-64 max-w-full rounded-xl border border-border"
                   width={519}
                   height={648}
                 />
-                <p className="text-center text-sm text-muted-foreground leading-relaxed">
+                <p className="text-center text-sm text-muted-foreground">
                   Após realizar o PIX, envie o comprovante para confirmar sua doação. Muito obrigado
                   por ajudar o Instituto AFAS.
                 </p>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="w-full min-h-12 rounded-full border border-border px-6 py-3 font-bold transition-all hover:bg-card active:scale-[0.98]"
+                  className="w-full rounded-full border border-border px-6 py-3 font-bold transition-all hover:bg-card"
                 >
                   Fechar
                 </button>

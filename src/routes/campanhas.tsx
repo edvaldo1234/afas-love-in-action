@@ -24,7 +24,7 @@ function CampanhasPage() {
           <div className="inline-block px-3 py-1 border border-primary/30 text-primary text-[10px] font-mono uppercase tracking-widest rounded mb-5 sm:mb-6">
             Programas
           </div>
-          <h1 className="text-[clamp(2.25rem,10vw,3.75rem)] sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance max-w-4xl">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance max-w-4xl">
             Onde sua doação <span className="text-primary">vira impacto.</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl text-pretty">
@@ -35,12 +35,12 @@ function CampanhasPage() {
       </section>
 
       <section className="pb-24 sm:pb-32 px-5 sm:px-6">
-        <div className="max-w-7xl mx-auto space-y-14 sm:space-y-24">
+        <div className="max-w-7xl mx-auto space-y-16 sm:space-y-24">
           {campaigns.map((c, i) => (
             <Reveal
               as="article"
               key={c.slug}
-              className={`grid md:grid-cols-2 gap-7 sm:gap-12 items-center ${
+              className={`grid md:grid-cols-2 gap-8 sm:gap-12 items-center ${
                 i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
               }`}
             >
@@ -69,7 +69,7 @@ function CampanhasPage() {
                   {c.description}
                 </p>
                 {c.program && (
-                  <div className="space-y-5 rounded-2xl border border-primary/25 bg-primary/5 p-4 sm:p-7">
+                  <div className="space-y-5 rounded-2xl border border-primary/25 bg-primary/5 p-5 sm:p-7">
                     <div>
                       <div className="text-[10px] font-mono uppercase tracking-widest text-primary mb-1">
                         Programa social
@@ -137,7 +137,7 @@ function CampanhasPage() {
                 <button
                   type="button"
                   onClick={openDonation}
-                  className="tap-target w-full sm:w-auto text-center inline-flex items-center justify-center bg-foreground text-background px-8 py-4 font-bold rounded-xl sm:rounded-lg hover:-translate-y-0.5 active:scale-[0.98] transition-transform"
+                  className="inline-block bg-foreground text-background px-8 py-4 font-bold rounded-lg hover:-translate-y-0.5 transition-transform"
                 >
                   Apoiar este programa
                 </button>

@@ -25,7 +25,7 @@ function SobrePage() {
           <div className="inline-block px-3 py-1 border border-primary/30 text-primary text-[10px] font-mono uppercase tracking-widest rounded mb-5 sm:mb-6">
             O Instituto
           </div>
-          <h1 className="text-[clamp(2.25rem,10vw,3.75rem)] sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance">
             Amor que se traduz em <span className="text-primary">ação concreta.</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-3xl text-pretty">
@@ -44,7 +44,7 @@ function SobrePage() {
             width={1200}
             height={800}
             loading="lazy"
-            className="w-full aspect-[4/3] sm:aspect-[3/2] object-cover rounded-2xl"
+            className="w-full aspect-[3/2] object-cover rounded-2xl"
           />
         </Reveal>
       </section>
@@ -84,7 +84,7 @@ function SobrePage() {
             width={1000}
             height={1000}
             loading="lazy"
-            className="w-full max-w-[520px] md:max-w-none mx-auto aspect-square object-contain rounded-2xl bg-card"
+            className="w-full aspect-square object-contain rounded-2xl bg-card"
           />
           <div className="space-y-5 sm:space-y-6">
             <div className="font-mono text-sm text-primary">02/</div>
@@ -112,7 +112,7 @@ function SobrePage() {
               ["Visão", "Ser referência regional em proteção integral à infância, articulando voluntariado qualificado e impacto comunitário."],
               ["Valores", "Amor, ação, transparência, escuta ativa e compromisso com o desenvolvimento humano de cada criança atendida."],
             ].map(([title, desc], i) => (
-              <Reveal key={title} delay={i * 120} className="rounded-2xl border border-border p-5 bg-card md:rounded-none md:border-0 md:p-0 md:bg-transparent">
+              <Reveal key={title} delay={i * 120}>
                 <div className="font-mono text-sm text-primary mb-4">{title}</div>
                 <p className="text-base sm:text-lg leading-relaxed">{desc}</p>
               </Reveal>
@@ -129,7 +129,7 @@ function SobrePage() {
           <button
             type="button"
             onClick={openDonation}
-            className="w-full sm:w-auto min-h-14 inline-flex items-center justify-center bg-primary text-primary-foreground px-10 py-4 sm:py-5 font-bold rounded-full hover:scale-105 active:scale-[0.98] transition-transform"
+            className="inline-block bg-primary text-primary-foreground px-10 py-5 font-bold rounded-full hover:scale-105 transition-transform"
           >
             Quero apoiar
           </button>

@@ -21,7 +21,7 @@ function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-8 pb-16 sm:pt-20 sm:pb-32 px-5 sm:px-6 overflow-hidden">
+      <section className="relative pt-12 pb-20 sm:pt-20 sm:pb-32 px-5 sm:px-6 overflow-hidden">
         {/* Ambient blobs */}
         <div
           aria-hidden
@@ -31,22 +31,22 @@ function HomePage() {
           aria-hidden
           className="pointer-events-none absolute top-40 -left-24 size-64 sm:size-80 rounded-full bg-secondary/20 blur-3xl animate-float-slower"
         />
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 sm:gap-12 items-center">
           <div className="lg:col-span-7 animate-reveal">
             <div className="inline-block px-3 py-1 border border-primary/30 text-primary text-[10px] font-mono uppercase tracking-widest rounded mb-5 sm:mb-6">
               Ame Fazendo Ação Solidária
             </div>
-            <h1 className="text-[clamp(2.5rem,12vw,3.75rem)] sm:text-6xl lg:text-8xl font-extrabold tracking-tighter leading-[0.95] sm:leading-[0.9] mb-6 sm:mb-8 text-balance">
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tighter leading-[0.95] sm:leading-[0.9] mb-6 sm:mb-8 text-balance">
               Transformando o futuro no <span className="text-primary">coração de Goiás.</span>
             </h1>
-            <p className="text-base sm:text-xl text-muted-foreground max-w-[50ch] leading-relaxed mb-7 sm:mb-10 text-pretty">
+            <p className="text-base sm:text-xl text-muted-foreground max-w-[50ch] leading-relaxed mb-8 sm:mb-10 text-pretty">
               Há mais de 8 anos, o Instituto AFAS atua no interior goiano unindo profissionais
               voluntários para oferecer dignidade, saúde e esperança para centenas de crianças.
             </p>
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
               <Link
                 to="/campanhas"
-                className="tap-target w-full sm:w-auto text-center bg-foreground text-background px-6 sm:px-8 py-4 font-bold rounded-xl sm:rounded-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all"
+                className="text-center bg-foreground text-background px-6 sm:px-8 py-4 font-bold rounded-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
               >
                 Conheça nossos programas
               </Link>
@@ -54,7 +54,7 @@ function HomePage() {
                 href="https://wa.me/556293944050?text=Ol%C3%A1,%20gostaria%20de%20ser%20volunt%C3%A1rio(a)%20do%20Instituto%20AFAS%20e%20quero%20saber%20como%20posso%20contribuir"
                 target="_blank"
                 rel="noreferrer"
-                className="tap-target w-full sm:w-auto text-center px-6 sm:px-8 py-4 border border-border font-bold rounded-xl sm:rounded-lg hover:bg-card hover:-translate-y-0.5 active:scale-[0.98] transition-all"
+                className="text-center px-6 sm:px-8 py-4 border border-border font-bold rounded-lg hover:bg-card hover:-translate-y-0.5 transition-all"
               >
                 Seja um voluntário
               </a>
@@ -66,7 +66,7 @@ function HomePage() {
               alt="Crianças atendidas pelo Instituto AFAS no interior de Goiás"
               width={1024}
               height={1280}
-              className="w-full aspect-[16/13] sm:aspect-[4/5] object-cover object-center rounded-2xl shadow-2xl"
+              className="w-full aspect-[4/5] object-cover rounded-2xl shadow-2xl"
             />
           </div>
         </div>
@@ -75,7 +75,7 @@ function HomePage() {
       {/* Stats */}
       <section className="py-14 sm:py-20 border-y border-border bg-card">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-8 sm:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
             {[
               ["01/", "8+ Anos", "Atuando no interior"],
               ["02/", "500+", "Cestas entregues/mês"],
@@ -103,7 +103,7 @@ function HomePage() {
                 width={1000}
                 height={1000}
                 loading="lazy"
-                className="w-full max-w-[440px] lg:max-w-none mx-auto aspect-square object-contain rounded-full border-[8px] sm:border-[12px] border-card shadow-2xl bg-card p-5 sm:p-10"
+                className="w-full aspect-square object-contain rounded-full border-[8px] sm:border-[12px] border-card shadow-2xl bg-card p-6 sm:p-10"
               />
             </Reveal>
             <Reveal delay={150} className="order-1 lg:order-2 space-y-6 sm:space-y-8">
@@ -154,14 +154,14 @@ function HomePage() {
           </Reveal>
 
           <div className="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
-            <Reveal className="surface-lift bg-background border border-border rounded-2xl p-6 sm:p-10 space-y-4">
+            <Reveal className="bg-background border border-border rounded-2xl p-7 sm:p-10 space-y-4 hover:shadow-xl hover:-translate-y-1 transition-all">
               <div className="font-mono text-sm text-primary">01/</div>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Missão</h3>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Amar com ação, cuidar, servir e transformar.
               </p>
             </Reveal>
-            <Reveal delay={120} className="surface-lift bg-background border border-border rounded-2xl p-6 sm:p-10 space-y-4">
+            <Reveal delay={120} className="bg-background border border-border rounded-2xl p-7 sm:p-10 space-y-4 hover:shadow-xl hover:-translate-y-1 transition-all">
               <div className="font-mono text-sm text-primary">02/</div>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Visão</h3>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -222,11 +222,11 @@ function HomePage() {
             </Link>
           </Reveal>
 
-          <div className="flex sm:grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none pb-3 -mx-5 px-5 sm:mx-0 sm:px-0 snap-row">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             {featured.map((c, i) => (
-              <Reveal key={c.slug} delay={i * 120} className="min-w-[84vw] sm:min-w-0 snap-center sm:snap-none">
-                <Link to="/campanhas" className="group block h-full rounded-2xl border border-background/10 p-3 sm:p-0 sm:border-0 sm:rounded-none transition-colors sm:hover:bg-transparent hover:bg-background/5">
-                  <div className="w-full aspect-[4/3] rounded-xl mb-5 sm:mb-6 overflow-hidden">
+              <Reveal key={c.slug} delay={i * 120}>
+                <Link to="/campanhas" className="group block">
+                  <div className="w-full aspect-[4/3] rounded-xl mb-6 overflow-hidden">
                     <img
                       src={c.image}
                       alt={c.title}
@@ -264,7 +264,7 @@ function HomePage() {
             <button
               type="button"
               onClick={openDonation}
-              className="w-full md:w-auto min-h-14 bg-primary text-primary-foreground px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-bold rounded-full hover:scale-105 active:scale-[0.98] transition-transform"
+              className="w-full md:w-auto bg-primary text-primary-foreground px-10 sm:px-12 py-5 sm:py-6 text-lg font-bold rounded-full hover:scale-105 transition-transform"
             >
               Quero ser um Doador
             </button>
@@ -272,7 +272,7 @@ function HomePage() {
               href="https://wa.me/556293944050?text=Ol%C3%A1,%20gostaria%20de%20ser%20volunt%C3%A1rio(a)%20do%20Instituto%20AFAS%20e%20quero%20saber%20como%20posso%20contribuir"
               target="_blank"
               rel="noreferrer"
-              className="w-full md:w-auto min-h-14 flex items-center justify-center text-center border border-foreground px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-bold rounded-full hover:bg-foreground hover:text-background active:scale-[0.98] transition-all"
+              className="w-full md:w-auto text-center border border-foreground px-10 sm:px-12 py-5 sm:py-6 text-lg font-bold rounded-full hover:bg-foreground hover:text-background transition-colors"
             >
               Quero ser Voluntário
             </a>
