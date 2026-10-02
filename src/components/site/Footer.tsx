@@ -3,16 +3,16 @@ import logoAsset from "@/assets/afas-logo-stacked.png.asset.json";
 
 export function Footer() {
   return (
-    <footer className="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 bg-background border-t border-border">
+    <footer className="py-14 sm:py-24 px-5 sm:px-6 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 text-left">
           <div className="sm:col-span-2">
             <img
               src={logoAsset.url}
               alt="Instituto AFAS — Ame Fazendo Ação Solidária"
-              className="h-24 sm:h-28 lg:h-32 w-auto mb-4"
+              className="h-24 sm:h-32 w-auto mb-4"
             />
-            <p className="text-muted-foreground max-w-md leading-relaxed">
+            <p className="text-muted-foreground max-w-sm leading-relaxed">
               Ame Fazendo Ação Solidária. Organização sem fins lucrativos dedicada à infância no
               interior de Goiás há mais de 8 anos.
             </p>

@@ -45,7 +45,7 @@ function EquipePage() {
           <div className="inline-block px-3 py-1 border border-primary/30 text-primary text-[10px] font-mono uppercase tracking-widest rounded mb-5 sm:mb-6">
             Equipe
           </div>
-          <h1 className="fluid-title font-extrabold tracking-tighter mb-6 sm:mb-8 text-balance">
+          <h1 className="text-[clamp(2.25rem,10vw,3.75rem)] sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance">
             Profissionais movidos por <span className="text-primary">propósito.</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl text-pretty">
@@ -63,7 +63,7 @@ function EquipePage() {
             width={1200}
             height={800}
             loading="lazy"
-            className="w-full aspect-[4/3] sm:aspect-[3/2] object-cover rounded-2xl sm:rounded-3xl"
+            className="w-full aspect-[4/3] sm:aspect-[3/2] object-cover rounded-2xl"
           />
         </Reveal>
       </section>
@@ -71,7 +71,7 @@ function EquipePage() {
       <section className="py-16 sm:py-24 px-5 sm:px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-x-16 gap-y-12 sm:gap-y-16">
           {specialties.map((s, i) => (
-            <Reveal key={s.n} delay={(i % 2) * 120} className="surface-lift rounded-2xl border border-border bg-card p-6 sm:p-8">
+            <Reveal key={s.n} delay={(i % 2) * 120} className="rounded-2xl border border-border bg-card p-6 md:rounded-none md:border-x-0 md:border-b-0 md:bg-transparent md:p-0 md:pt-8">
               <div className="font-mono text-sm text-primary mb-4">{s.n}</div>
               <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tighter mb-4">{s.title}</h2>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-pretty">{s.desc}</p>
@@ -91,7 +91,7 @@ function EquipePage() {
           </p>
           <Link
             to="/contato"
-            className="w-full sm:w-auto min-h-14 inline-flex items-center justify-center bg-primary text-primary-foreground px-10 py-4 font-bold rounded-full hover:scale-[1.03] active:scale-[0.98] transition-transform"
+            className="w-full sm:w-auto min-h-14 inline-flex items-center justify-center bg-primary text-primary-foreground px-10 py-4 sm:py-5 font-bold rounded-full hover:scale-105 active:scale-[0.98] transition-transform"
           >
             Quero ser voluntário
           </Link>

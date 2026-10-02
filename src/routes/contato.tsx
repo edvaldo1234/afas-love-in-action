@@ -23,7 +23,7 @@ function ContatoPage() {
           <div className="inline-block px-3 py-1 border border-primary/30 text-primary text-[10px] font-mono uppercase tracking-widest rounded mb-5 sm:mb-6">
             Contato
           </div>
-          <h1 className="fluid-title font-extrabold tracking-tighter mb-6 sm:mb-8 text-balance">
+          <h1 className="text-[clamp(2.25rem,10vw,3.75rem)] sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance">
             Vamos <span className="text-primary">construir juntos.</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl text-pretty">

@@ -29,16 +29,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-[72px] flex items-center justify-between gap-4">
+      <nav className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between gap-4">
         <Link to="/" className="shrink-0 tap-target flex items-center" onClick={() => setOpen(false)}>
           <img
             src={logoAsset.url}
             alt="Instituto AFAS — Ame Fazendo Ação Solidária"
-            className="h-9 sm:h-11 w-auto max-w-[190px] sm:max-w-[240px] object-contain"
+            className="h-9 md:h-12 w-auto max-w-[190px] md:max-w-none object-contain"
           />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-[13px] font-semibold uppercase tracking-[0.12em]">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-wider">
           {links.slice(1).map((l) => (
             <Link
               key={l.to}
@@ -52,7 +52,7 @@ export function Header() {
           <button
             type="button"
             onClick={openDonation}
-            className="tap-target bg-primary text-primary-foreground px-6 rounded-full hover:bg-primary/90 hover:-translate-y-0.5 transition-all"
+            className="bg-primary text-primary-foreground px-5 py-2 rounded-full hover:bg-primary/90 transition-all"
           >
             Doar Agora
           </button>
@@ -60,7 +60,7 @@ export function Header() {
 
         <button
           type="button"
-          className="lg:hidden tap-target size-11 rounded-full border border-border bg-card/80 flex flex-col items-center justify-center gap-[5px]"
+          className="md:hidden tap-target size-11 rounded-full border border-border bg-card/80 flex flex-col items-center justify-center gap-[5px]"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
@@ -72,7 +72,7 @@ export function Header() {
       </nav>
 
       {open && (
-        <div className="lg:hidden fixed inset-x-0 top-16 sm:top-[72px] h-[calc(100dvh-4rem)] sm:h-[calc(100dvh-72px)] bg-background/98 backdrop-blur-xl mobile-menu-in border-t border-border">
+        <div className="md:hidden fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] bg-background/98 backdrop-blur-xl mobile-menu-in border-t border-border">
           <div className="h-full px-5 py-6 flex flex-col overflow-y-auto">
             <div className="flex flex-col">
               {links.map((l, i) => (
@@ -80,7 +80,7 @@ export function Header() {
                   key={l.to}
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className="tap-target py-4 border-b border-border text-2xl sm:text-3xl font-extrabold tracking-tight flex items-center justify-between"
+                  className="tap-target py-4 border-b border-border text-2xl font-extrabold tracking-tight flex items-center justify-between"
                   activeProps={{ className: "text-primary" }}
                 >
                   <span>{l.label}</span>
