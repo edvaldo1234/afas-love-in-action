@@ -14,8 +14,8 @@ export function Footer() {
               className="h-28 sm:h-32 w-auto mb-4"
             />
             <p className="text-muted-foreground max-w-sm">
-              Ame Fazendo Ação Solidária. Organização sem fins lucrativos dedicada à infância no
-              interior de Goiás há mais de 8 anos.
+              Ame Fazendo Ação Solidária. Cuidado integral para crianças, adolescentes e famílias,
+              transformando vidas com Amor e Ação.
             </p>
           </div>
           <div className="space-y-3">
@@ -28,7 +28,8 @@ export function Footer() {
           <div className="space-y-3">
             <p className="font-bold uppercase text-[10px] tracking-widest text-primary">Siga-nos</p>
             <a href="https://www.instagram.com/institutoafas/" target="_blank" rel="noreferrer" className="block text-sm hover:text-primary">Instagram</a>
-            <p className="text-sm">contato@institutoafas.org</p>
+            <p className="text-sm">sede.institutoafas@gmail.com</p>
+            <p className="text-sm">+55 (62) 99394-4050</p>
             <p className="text-sm">Interior de Goiás — Brasil</p>
           </div>
         </div>
