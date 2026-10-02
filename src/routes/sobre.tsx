@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import keillaAsset from "@/assets/keilla-foto.jpg.asset.json";
-import volunteers from "@/assets/volunteers.jpg";
+import volunteersAsset from "@/assets/volunteers.jpg.asset.json";
 import { useDonation } from "@/components/site/DonationProvider";
 import { Reveal } from "@/components/site/Reveal";
 
@@ -39,7 +39,7 @@ function SobrePage() {
       <section className="py-12 sm:py-16 px-5 sm:px-6">
         <Reveal className="max-w-5xl mx-auto">
           <img
-            src={volunteers}
+            src={volunteersAsset.url}
             alt="Voluntários do Instituto AFAS organizando doações"
             width={1200}
             height={800}
