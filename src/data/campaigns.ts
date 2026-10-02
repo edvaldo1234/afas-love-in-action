@@ -1,8 +1,8 @@
-import campaignFood from "@/assets/campaign-food.jpg";
-import campaignPsych from "@/assets/campaign-psych.jpg";
-import campaignLegal from "@/assets/campaign-legal.jpg";
-import campaignWorkshop from "@/assets/campaign-workshop.jpg";
-import campaignSchool from "@/assets/campaign-school.jpg";
+import campaignFoodAsset from "@/assets/campaign-food.jpg.asset.json";
+import campaignPsychAsset from "@/assets/campaign-psych.jpg.asset.json";
+import campaignLegalAsset from "@/assets/campaign-legal.jpg.asset.json";
+import campaignWorkshopAsset from "@/assets/campaign-workshop.jpg.asset.json";
+import campaignSchoolAsset from "@/assets/campaign-school.jpg.asset.json";
 import logoAmorQueNutri from "@/assets/logo-amor-que-nutri.jpg.asset.json";
 import logoAcalmaMente from "@/assets/logo-acalmamente.jpg.asset.json";
 import logoVozDoSilencio from "@/assets/logo-voz-do-silencio.jpg.asset.json";
@@ -34,7 +34,7 @@ export const campaigns: Campaign[] = [
     short: "Distribuição mensal de cestas básicas para famílias cadastradas.",
     description:
       "Todo mês, levamos cestas básicas nutricionalmente balanceadas para mais de 150 famílias em situação de vulnerabilidade no interior de Goiás. Cada cesta é planejada por nossa equipe de nutricionistas voluntários.",
-    image: campaignFood,
+    image: campaignFoodAsset.url,
     status: "Ativa",
     progress: 75,
     program: {
@@ -67,7 +67,7 @@ export const campaigns: Campaign[] = [
     short: "Acompanhamento terapêutico gratuito para crianças.",
     description:
       "Sessões individuais e em grupo conduzidas por psicólogos voluntários, voltadas para crianças que enfrentam traumas, perdas e dificuldades emocionais.",
-    image: campaignPsych,
+    image: campaignPsychAsset.url,
     status: "Contínua",
     progress: 60,
     program: {
@@ -102,7 +102,7 @@ export const campaigns: Campaign[] = [
     short: "Orientação legal para garantir direitos básicos das famílias.",
     description:
       "Nossa equipe de advogados voluntários presta orientação jurídica gratuita em questões de família, benefícios sociais, documentação e direitos da criança.",
-    image: campaignLegal,
+    image: campaignLegalAsset.url,
     status: "Contínua",
     progress: 40,
     program: {
@@ -136,7 +136,7 @@ export const campaigns: Campaign[] = [
     short: "Arte, música e lazer para estimular o aprendizado.",
     description:
       "Encontros semanais de arte, música e brincadeiras dirigidas que tiram crianças da ociosidade, estimulam o desenvolvimento e fortalecem laços comunitários.",
-    image: campaignWorkshop,
+    image: campaignWorkshopAsset.url,
     status: "Ativa",
     progress: 80,
     program: {
@@ -169,7 +169,7 @@ export const campaigns: Campaign[] = [
     short: "Material escolar completo no início do ano letivo.",
     description:
       "Mochilas, cadernos, lápis e uniformes para garantir que cada criança comece o ano letivo com dignidade e as ferramentas necessárias para aprender.",
-    image: campaignSchool,
+    image: campaignSchoolAsset.url,
     status: "Sazonal",
     progress: 55,
   },
