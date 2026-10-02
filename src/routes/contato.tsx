@@ -23,7 +23,7 @@ function ContatoPage() {
           <div className="inline-block px-3 py-1 border border-primary/30 text-primary text-[10px] font-mono uppercase tracking-widest rounded mb-5 sm:mb-6">
             Contato
           </div>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance">
+          <h1 className="fluid-title font-extrabold tracking-tighter mb-6 sm:mb-8 text-balance">
             Vamos <span className="text-primary">construir juntos.</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl text-pretty">
@@ -35,7 +35,7 @@ function ContatoPage() {
 
       <section className="pb-24 sm:pb-32 px-5 sm:px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 sm:gap-8">
-          <Reveal className="border border-border rounded-2xl p-7 sm:p-10 space-y-6 bg-card transition-all hover:-translate-y-1 hover:shadow-xl">
+          <Reveal className="surface-lift border border-border rounded-2xl p-6 sm:p-10 space-y-6 bg-card">
             <div className="font-mono text-sm text-primary">01/</div>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tighter">Quero doar</h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -55,13 +55,13 @@ function ContatoPage() {
             <button
               type="button"
               onClick={openDonation}
-              className="w-full sm:w-auto inline-block bg-primary text-primary-foreground px-6 py-3 font-bold rounded-full hover:bg-primary/90 transition-all"
+              className="tap-target w-full sm:w-auto inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 font-bold rounded-full hover:bg-primary/90 active:scale-[0.98] transition-all"
             >
               Gerar doação
             </button>
           </Reveal>
 
-          <Reveal delay={120} className="border border-border rounded-2xl p-7 sm:p-10 space-y-6 bg-card transition-all hover:-translate-y-1 hover:shadow-xl">
+          <Reveal delay={120} className="surface-lift border border-border rounded-2xl p-6 sm:p-10 space-y-6 bg-card">
             <div className="font-mono text-sm text-primary">02/</div>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tighter">Quero ser voluntário</h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -72,23 +72,23 @@ function ContatoPage() {
               href="https://wa.me/556293944050?text=Ol%C3%A1,%20gostaria%20de%20ser%20volunt%C3%A1rio(a)%20do%20Instituto%20AFAS%20e%20quero%20saber%20como%20posso%20contribuir"
               target="_blank"
               rel="noreferrer"
-              className="w-full sm:w-auto text-center inline-block bg-foreground text-background px-6 py-3 font-bold rounded-lg"
+              className="tap-target w-full sm:w-auto text-center inline-flex items-center justify-center bg-foreground text-background px-6 py-3 font-bold rounded-xl active:scale-[0.98] transition-transform"
             >
               Falar pelo WhatsApp
             </a>
           </Reveal>
         </div>
 
-        <div className="max-w-5xl mx-auto mt-12 sm:mt-16 grid sm:grid-cols-3 gap-6 sm:gap-8 text-sm">
-          <div>
+        <div className="max-w-5xl mx-auto mt-12 sm:mt-16 grid sm:grid-cols-3 gap-4 sm:gap-8 text-sm">
+          <div className="rounded-xl border border-border p-4 sm:border-0 sm:p-0">
             <div className="font-mono text-xs uppercase tracking-widest text-primary mb-2">E-mail</div>
             <div className="break-words">contato@institutoafas.org</div>
           </div>
-          <div>
+          <div className="rounded-xl border border-border p-4 sm:border-0 sm:p-0">
             <div className="font-mono text-xs uppercase tracking-widest text-primary mb-2">Onde estamos</div>
             <div>Interior de Goiás — Brasil</div>
           </div>
-          <div>
+          <div className="rounded-xl border border-border p-4 sm:border-0 sm:p-0">
             <div className="font-mono text-xs uppercase tracking-widest text-primary mb-2">Redes</div>
             <a href="https://www.instagram.com/institutoafas/" target="_blank" rel="noreferrer" className="hover:text-primary">
               @institutoafas

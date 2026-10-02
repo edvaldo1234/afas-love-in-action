@@ -24,7 +24,7 @@ function CampanhasPage() {
           <div className="inline-block px-3 py-1 border border-primary/30 text-primary text-[10px] font-mono uppercase tracking-widest rounded mb-5 sm:mb-6">
             Programas
           </div>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance max-w-4xl">
+          <h1 className="fluid-title font-extrabold tracking-tighter mb-6 sm:mb-8 text-balance max-w-4xl">
             Onde sua doação <span className="text-primary">vira impacto.</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl text-pretty">
@@ -35,12 +35,12 @@ function CampanhasPage() {
       </section>
 
       <section className="pb-24 sm:pb-32 px-5 sm:px-6">
-        <div className="max-w-7xl mx-auto space-y-16 sm:space-y-24">
+        <div className="max-w-7xl mx-auto space-y-14 sm:space-y-20 lg:space-y-24">
           {campaigns.map((c, i) => (
             <Reveal
               as="article"
               key={c.slug}
-              className={`grid md:grid-cols-2 gap-8 sm:gap-12 items-center ${
+              className={`grid md:grid-cols-2 gap-7 sm:gap-10 lg:gap-14 items-center ${
                 i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
               }`}
             >
@@ -50,7 +50,7 @@ function CampanhasPage() {
                 width={800}
                 height={600}
                 loading="lazy"
-                className="w-full aspect-[4/3] object-cover rounded-2xl"
+                className="w-full aspect-[4/3] object-cover rounded-2xl sm:rounded-3xl shadow-sm"
               />
               <div className="space-y-5 sm:space-y-6">
                 <div className="flex flex-wrap items-center gap-3">
@@ -64,12 +64,12 @@ function CampanhasPage() {
                     {c.status}
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tighter">{c.title}</h2>
+                <h2 className="fluid-subtitle font-extrabold tracking-tighter">{c.title}</h2>
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-pretty">
                   {c.description}
                 </p>
                 {c.program && (
-                  <div className="space-y-5 rounded-2xl border border-primary/25 bg-primary/5 p-5 sm:p-7">
+                  <div className="space-y-5 rounded-2xl border border-primary/25 bg-primary/5 p-4 sm:p-7">
                     <div>
                       <div className="text-[10px] font-mono uppercase tracking-widest text-primary mb-1">
                         Programa social
@@ -92,7 +92,7 @@ function CampanhasPage() {
                       </p>
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="rounded-xl border border-border bg-card p-4 sm:p-5">
+                      <div className="surface-lift rounded-xl border border-border bg-card p-4 sm:p-5">
                         <h4 className="font-bold mb-3 text-sm uppercase tracking-wider">
                           Como funciona?
                         </h4>
@@ -102,7 +102,7 @@ function CampanhasPage() {
                           ))}
                         </ul>
                       </div>
-                      <div className="rounded-xl border border-border bg-card p-4 sm:p-5">
+                      <div className="surface-lift rounded-xl border border-border bg-card p-4 sm:p-5">
                         <h4 className="font-bold mb-3 text-sm uppercase tracking-wider">
                           Quem pode participar?
                         </h4>
@@ -113,7 +113,7 @@ function CampanhasPage() {
                         </ul>
                       </div>
                     </div>
-                    <div className="rounded-xl border border-border bg-card p-4 sm:p-5">
+                    <div className="surface-lift rounded-xl border border-border bg-card p-4 sm:p-5">
                       <h4 className="font-bold mb-3 text-sm uppercase tracking-wider">
                         Como ajudar?
                       </h4>
@@ -137,7 +137,7 @@ function CampanhasPage() {
                 <button
                   type="button"
                   onClick={openDonation}
-                  className="inline-block bg-foreground text-background px-8 py-4 font-bold rounded-lg hover:-translate-y-0.5 transition-transform"
+                  className="tap-target w-full sm:w-auto text-center inline-flex items-center justify-center bg-foreground text-background px-8 py-4 font-bold rounded-xl hover:-translate-y-0.5 active:scale-[0.98] transition-transform"
                 >
                   Apoiar este programa
                 </button>
