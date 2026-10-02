@@ -96,7 +96,7 @@ export function VolunteerProvider({ children }: { children: ReactNode }) {
     setOpen(true);
   }, []);
 
-  const updateField = <K extends keyof FormState>(key: K, value: FormState[K]) => {
+  const updateField = <K extends keyof FormState,>(key: K, value: FormState[K]) => {
     setForm((current) => ({ ...current, [key]: value }));
   };
 
