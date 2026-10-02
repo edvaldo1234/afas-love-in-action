@@ -7,13 +7,43 @@ export const Route = createFileRoute("/campanhas")({
   head: () => ({
     meta: [
       { title: "Programas — Instituto AFAS" },
-      { name: "description", content: "Conheça os programas ativos do Instituto AFAS: cestas básicas, apoio psicológico, jurídico, oficinas e kits escolares." },
+      { name: "description", content: "Conheça os programas essenciais e complementares do Instituto AFAS, além dos eventos, campanhas sazonais e parcerias do AFAS Sustentável." },
       { property: "og:title", content: "Programas — Instituto AFAS" },
       { property: "og:description", content: "Programas contínuos que transformam a vida de crianças no interior de Goiás." },
     ],
   }),
   component: CampanhasPage,
 });
+
+const complementaryPrograms = [
+  {
+    name: "Amor que Cresce",
+    description: "Apoio a gestantes, planejamento familiar e kits para recém-nascidos.",
+  },
+  {
+    name: "Level Up",
+    description: "Ensino e suporte educacional, incluindo aulas de inglês com professores qualificados.",
+  },
+  {
+    name: "Direito de Amar",
+    description: "Atendimento jurídico para a rede familiar da criança, adolescente e população em geral.",
+  },
+  {
+    name: "Meu Pijama Pijaminha",
+    description: "Fortalecimento da identidade e autoconfiança infanto-juvenil, com a doação do pijama como objeto simbólico do programa.",
+  },
+] as const;
+
+const fixedEvents = [
+  {
+    name: "Amor em Cada Peça",
+    description: "Bazar solidário realizado de forma semestral ou anual.",
+  },
+  {
+    name: "Oxente, Ajuda aí",
+    description: "Festa do Milho, evento junino com temática caipira.",
+  },
+] as const;
 
 function CampanhasPage() {
   const { openDonation } = useDonation();
@@ -27,15 +57,25 @@ function CampanhasPage() {
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] mb-6 sm:mb-8 text-balance max-w-4xl">
             Onde sua doação <span className="text-primary">vira impacto.</span>
           </h1>
-          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl text-pretty">
-            Cada programa é desenvolvido por especialistas voluntários e realizado com transparência,
-            atendendo necessidades reais da comunidade.
+          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl text-pretty">
+            Os programas do AFAS atuam de forma integrada no cuidado físico, mental, socioemocional
+            e espiritual de crianças, adolescentes e famílias, com ações de proteção, desenvolvimento
+            humano e fortalecimento do sentido de vida.
           </p>
         </div>
       </section>
 
-      <section className="pb-24 sm:pb-32 px-5 sm:px-6">
-        <div className="max-w-7xl mx-auto space-y-16 sm:space-y-24">
+      <section className="pb-20 sm:pb-28 px-5 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="mb-12 sm:mb-16">
+            <div className="text-[10px] font-mono uppercase tracking-widest text-primary mb-3">
+              Programas Essenciais
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tighter">
+              Cuidado integral em quatro frentes
+            </h2>
+          </Reveal>
+          <div className="space-y-16 sm:space-y-24">
           {campaigns.map((c, i) => (
             <Reveal
               as="article"
@@ -144,6 +184,91 @@ function CampanhasPage() {
               </div>
             </Reveal>
           ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-28 px-5 sm:px-6 bg-card border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="max-w-3xl mb-10 sm:mb-14">
+            <div className="text-[10px] font-mono uppercase tracking-widest text-primary mb-3">
+              Programas Complementares
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tighter mb-5">
+              Apoio que acompanha diferentes fases da vida
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Além dos programas essenciais, o AFAS mantém frentes de apoio à gestação, educação,
+              orientação jurídica e fortalecimento da identidade de crianças e adolescentes.
+            </p>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+            {complementaryPrograms.map((program, i) => (
+              <Reveal
+                key={program.name}
+                delay={i * 90}
+                className="rounded-2xl border border-border bg-background p-6 sm:p-7"
+              >
+                <div className="font-mono text-xs text-primary mb-4">0{i + 5}/</div>
+                <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight mb-3">
+                  {program.name}
+                </h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  {program.description}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-28 px-5 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="max-w-3xl mb-10 sm:mb-14">
+            <div className="text-[10px] font-mono uppercase tracking-widest text-primary mb-3">
+              AFAS Sustentável
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tighter mb-5">
+              Mobilização, eventos e parcerias
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              A sustentabilidade das ações também passa por eventos próprios, campanhas sazonais
+              e alianças com empresas, profissionais liberais e órgãos públicos.
+            </p>
+          </Reveal>
+
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
+            <Reveal className="rounded-2xl border border-border p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-extrabold mb-5">Eventos fixos</h3>
+              <div className="space-y-5">
+                {fixedEvents.map((event) => (
+                  <div key={event.name}>
+                    <p className="font-bold">{event.name}</p>
+                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                      {event.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={100} className="rounded-2xl border border-border p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-extrabold mb-5">Campanhas sazonais</h3>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                Ações pontuais ligadas a datas comemorativas e estações do ano, como Páscoa,
+                campanha de roupas de inverno, Dia das Crianças, Natal e outras mobilizações.
+              </p>
+            </Reveal>
+
+            <Reveal delay={200} className="rounded-2xl border border-border p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-extrabold mb-5">Parcerias comerciais</h3>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                Alianças com empresas, profissionais liberais locais e regionais e órgãos públicos
+                ajudam a ampliar o alcance e a continuidade das ações do Instituto AFAS.
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
     </>
