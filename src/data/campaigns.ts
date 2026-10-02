@@ -38,7 +38,7 @@ export const campaigns: Campaign[] = [
     status: "Ativa",
     progress: 75,
     program: {
-      name: "Amor que Nutri",
+      name: "Amor que Nutre",
       logo: logoAmorQueNutri.url,
       intro:
         "Programa voltado para promover a saúde física, alimentação saudável e educação nutricional. Atua na distribuição de alimentos através do Mercado Solidário, acompanhamento nutricional e cursos na área, ajudando a promover saúde, combater a fome e a desnutrição.",
@@ -71,7 +71,7 @@ export const campaigns: Campaign[] = [
     status: "Contínua",
     progress: 60,
     program: {
-      name: "AcalmaMente",
+      name: "ACALMAmente",
       logo: logoAcalmaMente.url,
       intro:
         "Programa voltado para a promoção do bem-estar mental e socioemocional de crianças, adolescentes e de suas famílias. Por meio de atendimento psicológico e apoio terapêutico, fortalece o equilíbrio emocional e o desenvolvimento de habilidades para o enfrentamento dos desafios do dia a dia.",
