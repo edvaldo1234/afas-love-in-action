@@ -29,11 +29,11 @@ export type Campaign = {
 export const campaigns: Campaign[] = [
   {
     slug: "combate-a-fome",
-    title: "Combate à Fome",
-    tag: "Cesta Solidária",
-    short: "Distribuição mensal de cestas básicas para famílias cadastradas.",
+    title: "Amor que Nutre",
+    tag: "Saúde Física e Nutrição",
+    short: "Educação nutricional, distribuição de alimentos e cursos para promover saúde e bem-estar.",
     description:
-      "Todo mês, levamos cestas básicas nutricionalmente balanceadas para mais de 150 famílias em situação de vulnerabilidade no interior de Goiás. Cada cesta é planejada por nossa equipe de nutricionistas voluntários.",
+      "Programa de cuidado com a saúde física por meio de educação nutricional, distribuição de alimentos e cursos, fortalecendo famílias em situação de vulnerabilidade.",
     image: campaignFoodAsset.url,
     status: "Ativa",
     progress: 75,
@@ -62,11 +62,11 @@ export const campaigns: Campaign[] = [
   },
   {
     slug: "apoio-psicologico",
-    title: "Apoio Psicológico",
+    title: "ACALMAmente",
     tag: "Saúde Mental",
-    short: "Acompanhamento terapêutico gratuito para crianças.",
+    short: "Atendimento psicológico e terapêutico para crianças, adolescentes e adultos.",
     description:
-      "Sessões individuais e em grupo conduzidas por psicólogos voluntários, voltadas para crianças que enfrentam traumas, perdas e dificuldades emocionais.",
+      "Atendimento psicológico e terapêutico com foco em saúde mental e socioemocional, acolhendo crianças, adolescentes, adultos e famílias.",
     image: campaignPsychAsset.url,
     status: "Contínua",
     progress: 60,
@@ -97,11 +97,11 @@ export const campaigns: Campaign[] = [
   },
   {
     slug: "assessoria-juridica",
-    title: "Assessoria Jurídica",
-    tag: "Direito Cidadão",
-    short: "Orientação legal para garantir direitos básicos das famílias.",
+    title: "Voz do Silêncio",
+    tag: "Proteção e Amparo",
+    short: "Proteção, amparo e encaminhamento de vítimas de violência e abuso.",
     description:
-      "Nossa equipe de advogados voluntários presta orientação jurídica gratuita em questões de família, benefícios sociais, documentação e direitos da criança.",
+      "Programa de identificação, acolhimento, proteção e encaminhamento de crianças, adolescentes e outras vítimas de violência, abuso e situações de vulnerabilidade.",
     image: campaignLegalAsset.url,
     status: "Contínua",
     progress: 40,
@@ -131,11 +131,11 @@ export const campaigns: Campaign[] = [
   },
   {
     slug: "oficinas-criativas",
-    title: "Oficinas Criativas",
-    tag: "Atividades em Conjunto",
-    short: "Arte, música e lazer para estimular o aprendizado.",
+    title: "Raízes",
+    tag: "Espiritualidade e Propósito",
+    short: "Aconselhamento espiritual, princípios e propósito de vida com base na Psicologia Transpessoal.",
     description:
-      "Encontros semanais de arte, música e brincadeiras dirigidas que tiram crianças da ociosidade, estimulam o desenvolvimento e fortalecem laços comunitários.",
+      "Programa voltado ao fortalecimento de valores, princípios, espiritualidade e propósito de vida a partir de uma visão integral do ser humano.",
     image: campaignWorkshopAsset.url,
     status: "Ativa",
     progress: 80,
@@ -163,14 +163,14 @@ export const campaigns: Campaign[] = [
     },
   },
   {
-    slug: "kits-escolares",
-    title: "Kits Escolares",
-    tag: "Volta às Aulas",
-    short: "Material escolar completo no início do ano letivo.",
+    slug: "level-up",
+    title: "Level Up",
+    tag: "Educação",
+    short: "Ensino e suporte educacional, incluindo aulas de inglês com professores qualificados.",
     description:
-      "Mochilas, cadernos, lápis e uniformes para garantir que cada criança comece o ano letivo com dignidade e as ferramentas necessárias para aprender.",
+      "Programa de ensino e suporte educacional que amplia oportunidades de aprendizagem, incluindo aulas de inglês com professores qualificados.",
     image: campaignSchoolAsset.url,
-    status: "Sazonal",
+    status: "Contínua",
     progress: 55,
   },
 ];
