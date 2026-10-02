@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 
-const NOTIFY_EMAIL =
-  process.env.VOLUNTEER_NOTIFY_EMAIL || "sede.institutoafas@gmail.com";
+const DEFAULT_NOTIFY_EMAIL = "sede.institutoafas@gmail.com";
 
 const volunteerSchema = z.object({
   name: z.string().trim().min(2, "Informe o nome completo.").max(120),
@@ -16,8 +15,8 @@ const volunteerSchema = z.object({
   availability: z.string().trim().min(2, "Informe a disponibilidade.").max(120),
   experience: z.string().trim().max(1000).optional().default(""),
   motivation: z.string().trim().max(1500).optional().default(""),
-  consent: z.literal(true, {
-    errorMap: () => ({ message: "É necessário autorizar o uso dos dados." }),
+  consent: z.boolean().refine((value) => value === true, {
+    message: "É necessário autorizar o uso dos dados.",
   }),
   company: z.string().max(0).optional().default(""),
 });
@@ -53,6 +52,7 @@ export const Route = createFileRoute("/api/public/volunteers")({
 
         const smtpUser = process.env.SMTP_USER;
         const smtpPass = process.env.SMTP_PASS;
+        const notifyEmail = process.env.VOLUNTEER_NOTIFY_EMAIL || DEFAULT_NOTIFY_EMAIL;
         const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
         const smtpPort = Number(process.env.SMTP_PORT || "465");
         const smtpSecure = (process.env.SMTP_SECURE || "true") !== "false";
@@ -94,7 +94,7 @@ export const Route = createFileRoute("/api/public/volunteers")({
               name: "Instituto AFAS — Site",
               address: smtpUser,
             },
-            to: NOTIFY_EMAIL,
+            to: notifyEmail,
             replyTo: data.email,
             subject,
             text: buildTextEmail(data, submittedAt),
