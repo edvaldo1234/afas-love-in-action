@@ -96,55 +96,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Founder / Institutional */}
-      <section className="py-20 sm:py-32 px-5 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            <Reveal className="order-2 lg:order-1">
-              <img
-                src={keillaAsset.url}
-                alt="Keilla, fundadora do Instituto AFAS"
-                width={1000}
-                height={1000}
-                loading="lazy"
-                className="w-full aspect-square object-contain rounded-full border-[8px] sm:border-[12px] border-card shadow-2xl bg-card p-6 sm:p-10"
-              />
-            </Reveal>
-            <Reveal delay={150} className="order-1 lg:order-2 space-y-6 sm:space-y-8">
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-                Uma missão liderada pelo amor.
-              </h2>
-              <div className="space-y-5 sm:space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground text-pretty">
-                <p>
-                  O Instituto AFAS nasceu do desejo da <strong className="text-foreground">Keilla</strong>{" "}
-                  de mudar a realidade local. O que começou como uma iniciativa individual cresceu
-                  para se tornar uma rede de proteção essencial em Goiás.
-                </p>
-                <p>
-                  Hoje, contamos com uma equipe multidisciplinar de nutricionistas, psicólogos e
-                  advogados que doam seu tempo e expertise para garantir que o desenvolvimento
-                  dessas crianças seja pleno e protegido.
-                </p>
-              </div>
-              <div className="pt-4 border-t border-border flex items-center gap-4">
-                <div className="size-12 rounded-full bg-primary/10 grid place-items-center text-primary font-bold italic">
-                  K
-                </div>
-                <div>
-                  <p className="font-bold">Keilla</p>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                    Fundadora & Liderança
-                  </p>
-                </div>
-              </div>
-              <Link to="/sobre" className="inline-block border-b border-primary text-primary font-bold pb-1 story-link">
-                Conheça nossa história →
-              </Link>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       {/* Missão, Visão e Valores */}
       <section className="py-20 sm:py-32 px-5 sm:px-6 bg-card border-y border-border overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -254,6 +205,55 @@ function HomePage() {
                 </Link>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder / Institutional */}
+      <section className="py-20 sm:py-32 px-5 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <Reveal className="order-2 lg:order-1">
+              <img
+                src={keillaAsset.url}
+                alt="Keilla, fundadora do Instituto AFAS"
+                width={1000}
+                height={1000}
+                loading="lazy"
+                className="w-full aspect-square object-contain rounded-full border-[8px] sm:border-[12px] border-card shadow-2xl bg-card p-6 sm:p-10"
+              />
+            </Reveal>
+            <Reveal delay={150} className="order-1 lg:order-2 space-y-6 sm:space-y-8">
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+                Uma missão liderada pelo amor.
+              </h2>
+              <div className="space-y-5 sm:space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground text-pretty">
+                <p>
+                  O Instituto AFAS nasceu do desejo da <strong className="text-foreground">Keilla</strong>{" "}
+                  de mudar a realidade local. O que começou como uma iniciativa individual cresceu
+                  para se tornar uma rede de proteção essencial em Goiás.
+                </p>
+                <p>
+                  Hoje, contamos com uma equipe multidisciplinar de nutricionistas, psicólogos e
+                  advogados que doam seu tempo e expertise para garantir que o desenvolvimento
+                  dessas crianças seja pleno e protegido.
+                </p>
+              </div>
+              <div className="pt-4 border-t border-border flex items-center gap-4">
+                <div className="size-12 rounded-full bg-primary/10 grid place-items-center text-primary font-bold italic">
+                  K
+                </div>
+                <div>
+                  <p className="font-bold">Keilla</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                    Fundadora & Liderança
+                  </p>
+                </div>
+              </div>
+              <Link to="/sobre" className="inline-block border-b border-primary text-primary font-bold pb-1 story-link">
+                Conheça nossa história →
+              </Link>
+            </Reveal>
           </div>
         </div>
       </section>
