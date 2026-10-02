@@ -162,15 +162,5 @@ export const campaigns: Campaign[] = [
       ],
     },
   },
-  {
-    slug: "level-up",
-    title: "Level Up",
-    tag: "Educação",
-    short: "Ensino e suporte educacional, incluindo aulas de inglês com professores qualificados.",
-    description:
-      "Programa de ensino e suporte educacional que amplia oportunidades de aprendizagem, incluindo aulas de inglês com professores qualificados.",
-    image: campaignSchoolAsset.url,
-    status: "Contínua",
-    progress: 55,
-  },
+
 ];
