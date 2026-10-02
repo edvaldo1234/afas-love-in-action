@@ -8,7 +8,7 @@ export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
       { title: "O Instituto — Instituto AFAS" },
-      { name: "description", content: "Conheça a história do Instituto AFAS, fundado por Keilla, atuando há mais de 8 anos no interior de Goiás." },
+      { name: "description", content: "Conheça o Instituto AFAS e seu trabalho de cuidado integral com crianças, adolescentes e famílias por meio de saúde física, mental, socioemocional e espiritual." },
       { property: "og:title", content: "O Instituto — Instituto AFAS" },
       { property: "og:description", content: "Mais de 8 anos transformando vidas no interior goiano." },
     ],
@@ -29,9 +29,11 @@ function SobrePage() {
             Amor que se traduz em <span className="text-primary">ação concreta.</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-3xl text-pretty">
-            O Instituto AFAS — Ame Fazendo Ação Solidária — é uma organização sem fins lucrativos
-            que há mais de 8 anos atende crianças e famílias em situação de vulnerabilidade no
-            interior de Goiás.
+            O Instituto AFAS — Ame Fazendo Ação Solidária — promove cuidado integral a crianças,
+            adolescentes e suas famílias em situação de maior fragilidade socioeconômica e emocional.
+          </p>
+          <p className="mt-5 text-sm sm:text-base font-semibold text-primary">
+            Porque quem ama, faz. AFAS. — Transformando vidas com Amor e Ação.
           </p>
         </div>
       </section>
@@ -77,6 +79,44 @@ function SobrePage() {
       </section>
 
       <section className="py-16 sm:py-24 px-5 sm:px-6 bg-card border-y border-border">
+        <div className="max-w-5xl mx-auto">
+          <Reveal className="max-w-3xl mb-10 sm:mb-14">
+            <div className="font-mono text-sm text-primary mb-3">02/</div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-5">
+              Um olhar integral para o ser humano
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-pretty">
+              Nossos programas têm como base a Psicologia Transpessoal e integram quatro dimensões
+              essenciais da vida humana: saúde física, mental, socioemocional e espiritual. O trabalho
+              busca acolhimento, proteção, desenvolvimento humano e sentido de vida, guiado pelo Amor
+              em Ação e por princípios e valores cristãos.
+            </p>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              ["Corpo", "Saúde física e bem-estar, considerando os aspectos biológicos."],
+              ["Mente", "Educação e desenvolvimento intelectual, com foco nos aspectos mentais e cognitivos."],
+              ["Socioemocional", "Apoio psicológico e emocional, integrando aspectos psicológicos e sociais."],
+              ["Espiritual", "Valores, princípios e propósito de vida, contemplando os aspectos espirituais."],
+            ].map(([title, desc], i) => (
+              <Reveal
+                key={title}
+                delay={i * 90}
+                className="rounded-2xl border border-border bg-background p-6"
+              >
+                <div className="text-[10px] font-mono uppercase tracking-widest text-primary mb-3">
+                  Pilar 0{i + 1}
+                </div>
+                <h3 className="text-xl font-extrabold mb-3">{title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{desc}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 px-5 sm:px-6 bg-card border-y border-border">
         <Reveal className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 sm:gap-16 items-center">
           <img
             src={keillaAsset.url}
@@ -87,7 +127,7 @@ function SobrePage() {
             className="w-full aspect-square object-contain rounded-2xl bg-card"
           />
           <div className="space-y-5 sm:space-y-6">
-            <div className="font-mono text-sm text-primary">02/</div>
+            <div className="font-mono text-sm text-primary">03/</div>
             <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
               Liderança que inspira
             </h2>
@@ -108,9 +148,9 @@ function SobrePage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 sm:gap-12">
             {[
-              ["Missão", "Promover dignidade e oportunidade para crianças do interior de Goiás através de ações solidárias contínuas."],
-              ["Visão", "Ser referência regional em proteção integral à infância, articulando voluntariado qualificado e impacto comunitário."],
-              ["Valores", "Amor, ação, transparência, escuta ativa e compromisso com o desenvolvimento humano de cada criança atendida."],
+              ["Missão", "Amar com ação, cuidando, servindo e transformando realidades por meio de programas integrados."],
+              ["Visão", "Promover desenvolvimento integral de crianças, adolescentes e famílias, fortalecendo corpo, mente, dimensão socioemocional e espiritual."],
+              ["Valores", "Acolhimento, proteção, desenvolvimento humano, sentido de vida, Amor em Ação e princípios cristãos."],
             ].map(([title, desc], i) => (
               <Reveal key={title} delay={i * 120}>
                 <div className="font-mono text-sm text-primary mb-4">{title}</div>
