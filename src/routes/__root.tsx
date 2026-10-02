@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { DonationProvider } from "@/components/site/DonationProvider";
+import { VolunteerProvider } from "@/components/site/VolunteerProvider";
 import faviconAsset from "@/assets/favicon.png.asset.json";
 
 function NotFoundComponent() {
@@ -121,13 +122,15 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <DonationProvider>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            <Outlet />
-          </main>
-          <Footer />
-        </div>
+        <VolunteerProvider>
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              <Outlet />
+            </main>
+            <Footer />
+          </div>
+        </VolunteerProvider>
       </DonationProvider>
     </QueryClientProvider>
   );
