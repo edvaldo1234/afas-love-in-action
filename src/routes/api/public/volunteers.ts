@@ -9,7 +9,7 @@ const volunteerSchema = z.object({
   state: z.string().trim().length(2, "Informe a UF com 2 letras.").transform((value) => value.toUpperCase()),
   phone: z.string().trim().min(8, "Informe um WhatsApp válido.").max(24),
   email: z.string().trim().email("Informe um e-mail válido.").max(160),
-  age: z.coerce.number().int().min(14, "Idade inválida.").max(100, "Idade inválida."),
+  age: z.coerce.number().int().min(1, "Idade inválida.").max(120, "Idade inválida."),
   profession: z.string().trim().max(120).optional().default(""),
   program: z.string().trim().min(2, "Selecione um programa.").max(120),
   availability: z.string().trim().min(2, "Informe a disponibilidade.").max(120),
@@ -18,7 +18,7 @@ const volunteerSchema = z.object({
   consent: z.boolean().refine((value) => value === true, {
     message: "É necessário autorizar o uso dos dados.",
   }),
-  company: z.string().max(0).optional().default(""),
+  company: z.string().max(200).optional().default(""),
 });
 
 export const Route = createFileRoute("/api/public/volunteers")({
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/api/public/volunteers")({
           return Response.json({ ok: true });
         }
 
-        const smtpUser = process.env.SMTP_USER;
+        const smtpUser = process.env.SMTP_USER || DEFAULT_NOTIFY_EMAIL;
         const smtpPass = process.env.SMTP_PASS;
         const notifyEmail = process.env.VOLUNTEER_NOTIFY_EMAIL || DEFAULT_NOTIFY_EMAIL;
         const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
