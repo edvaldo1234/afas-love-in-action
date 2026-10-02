@@ -44,12 +44,12 @@ function ContatoPage() {
             </p>
             <div className="space-y-3 pt-4 border-t border-border text-sm">
               <div>
-                <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Pix</div>
-                <div className="font-bold break-words">contato@institutoafas.org</div>
+                <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">E-mail</div>
+                <div className="font-bold break-words">sede.institutoafas@gmail.com</div>
               </div>
               <div>
                 <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">WhatsApp</div>
-                <div className="font-bold">+55 (62) 9999-9999</div>
+                <div className="font-bold">+55 (62) 99394-4050</div>
               </div>
             </div>
             <button
@@ -82,7 +82,7 @@ function ContatoPage() {
         <div className="max-w-5xl mx-auto mt-12 sm:mt-16 grid sm:grid-cols-3 gap-6 sm:gap-8 text-sm">
           <div>
             <div className="font-mono text-xs uppercase tracking-widest text-primary mb-2">E-mail</div>
-            <div className="break-words">contato@institutoafas.org</div>
+            <div className="break-words">sede.institutoafas@gmail.com</div>
           </div>
           <div>
             <div className="font-mono text-xs uppercase tracking-widest text-primary mb-2">Onde estamos</div>
